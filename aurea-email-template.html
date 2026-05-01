@@ -1,0 +1,210 @@
+<!--
+════════════════════════════════════════════════════════════
+  TEMPLATE DE E-MAIL — ÁUREA LOJA  (versão corrigida)
+  
+  COMO USAR NO EMAILJS:
+  1. Vá em Email Templates → seu template → Edit
+  2. No campo "Subject" coloque:
+        🛍️ Novo Pedido #{{order_number}} — Áurea
+  3. No campo "Content" / "Body":
+     → Clique na aba "Code Editor" (ícone </> )
+     → Apague tudo que tiver lá
+     → Cole TODO este arquivo
+  4. Clique em Save
+  
+  IMPORTANTE: as variáveis {{assim}} devem aparecer
+  EXATAMENTE como estão aqui — o EmailJS diferencia
+  maiúsculas de minúsculas.
+════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Novo Pedido — Áurea</title>
+</head>
+<body style="margin:0;padding:0;background:#0a0a0a;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0a;padding:32px 0;">
+<tr><td align="center">
+
+  <table width="600" cellpadding="0" cellspacing="0"
+         style="max-width:600px;width:100%;background:#111;border-radius:12px;
+                border:1px solid #2a2a2a;overflow:hidden;">
+
+    <!-- HEADER -->
+    <tr>
+      <td style="background:#1a1508;padding:32px 36px;text-align:center;border-bottom:1px solid #2a2a2a;">
+        <p style="margin:0 0 6px;color:#c9a84c;font-size:10px;letter-spacing:4px;
+                  text-transform:uppercase;font-family:Arial,sans-serif;">
+          ÁUREA — MODA DE LUXO
+        </p>
+        <h1 style="margin:0;color:#fff;font-size:22px;font-family:Georgia,serif;font-weight:400;">
+          Novo Pedido Recebido
+        </h1>
+      </td>
+    </tr>
+
+    <!-- NÚMERO DO PEDIDO -->
+    <tr>
+      <td style="padding:28px 36px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0"
+               style="background:#1a1a1a;border-left:4px solid #c9a84c;border-radius:6px;">
+          <tr>
+            <td style="padding:16px 18px;">
+              <p style="margin:0 0 4px;color:#c9a84c;font-size:10px;letter-spacing:2px;
+                        text-transform:uppercase;font-family:Arial,sans-serif;">
+                Pedido
+              </p>
+              <p style="margin:0;color:#fff;font-size:24px;font-family:Georgia,serif;font-weight:bold;">
+                #{{order_number}}
+              </p>
+              <p style="margin:6px 0 0;color:#888;font-size:12px;font-family:Arial,sans-serif;">
+                {{order_date}} &nbsp;·&nbsp; {{items_count}} item(ns) &nbsp;·&nbsp; {{payment_method}}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- DADOS DO CLIENTE -->
+    <tr>
+      <td style="padding:24px 36px 0;">
+        <p style="margin:0 0 12px;color:#c9a84c;font-size:10px;letter-spacing:2px;
+                  text-transform:uppercase;font-family:Arial,sans-serif;
+                  border-bottom:1px solid #2a2a2a;padding-bottom:8px;">
+          Cliente
+        </p>
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="50%" style="padding-bottom:10px;vertical-align:top;">
+              <p style="margin:0 0 2px;color:#666;font-size:10px;text-transform:uppercase;
+                        font-family:Arial,sans-serif;letter-spacing:1px;">Nome</p>
+              <p style="margin:0;color:#fff;font-size:13px;font-family:Arial,sans-serif;">
+                {{customer_name}}
+              </p>
+            </td>
+            <td width="50%" style="padding-bottom:10px;vertical-align:top;">
+              <p style="margin:0 0 2px;color:#666;font-size:10px;text-transform:uppercase;
+                        font-family:Arial,sans-serif;letter-spacing:1px;">E-mail</p>
+              <p style="margin:0;color:#fff;font-size:13px;font-family:Arial,sans-serif;">
+                {{customer_email}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" style="vertical-align:top;">
+              <p style="margin:0 0 2px;color:#666;font-size:10px;text-transform:uppercase;
+                        font-family:Arial,sans-serif;letter-spacing:1px;">Telefone</p>
+              <p style="margin:0;color:#fff;font-size:13px;font-family:Arial,sans-serif;">
+                {{customer_phone}}
+              </p>
+            </td>
+            <td width="50%" style="vertical-align:top;">
+              <p style="margin:0 0 2px;color:#666;font-size:10px;text-transform:uppercase;
+                        font-family:Arial,sans-serif;letter-spacing:1px;">Pagamento</p>
+              <p style="margin:0;color:#c9a84c;font-size:13px;font-weight:bold;
+                        font-family:Arial,sans-serif;">
+                {{payment_method}}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ENDEREÇO -->
+    <tr>
+      <td style="padding:20px 36px 0;">
+        <p style="margin:0 0 12px;color:#c9a84c;font-size:10px;letter-spacing:2px;
+                  text-transform:uppercase;font-family:Arial,sans-serif;
+                  border-bottom:1px solid #2a2a2a;padding-bottom:8px;">
+          Endereço de Entrega
+        </p>
+        <table width="100%" cellpadding="0" cellspacing="0"
+               style="background:#1a1a1a;border-radius:6px;">
+          <tr>
+            <td style="padding:14px 16px;">
+              <p style="margin:0;color:#fff;font-size:13px;font-family:Arial,sans-serif;
+                        line-height:1.6;">
+                {{delivery_address}}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ITENS DO PEDIDO
+         ATENÇÃO: {{order_items}} é texto puro com quebras de linha.
+         Usamos <pre> para preservar a formatação sem depender de HTML. -->
+    <tr>
+      <td style="padding:24px 36px 0;">
+        <p style="margin:0 0 12px;color:#c9a84c;font-size:10px;letter-spacing:2px;
+                  text-transform:uppercase;font-family:Arial,sans-serif;
+                  border-bottom:1px solid #2a2a2a;padding-bottom:8px;">
+          Itens do Pedido
+        </p>
+        <table width="100%" cellpadding="0" cellspacing="0"
+               style="background:#1a1a1a;border-radius:6px;">
+          <tr>
+            <td style="padding:16px 18px;">
+              <pre style="margin:0;color:#ccc;font-size:13px;font-family:'Courier New',monospace;
+                          line-height:1.8;white-space:pre-wrap;word-break:break-word;">{{order_items}}</pre>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- TOTAL -->
+    <tr>
+      <td style="padding:20px 36px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0"
+               style="background:#1a1508;border:1px solid #c9a84c;border-radius:6px;">
+          <tr>
+            <td style="padding:16px 18px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="color:#888;font-size:12px;font-family:Arial,sans-serif;">Frete</td>
+                  <td align="right" style="color:#2ecc71;font-size:12px;font-weight:bold;
+                                           font-family:Arial,sans-serif;">GRÁTIS</td>
+                </tr>
+                <tr>
+                  <td style="padding-top:10px;border-top:1px solid #2a2a2a;color:#fff;
+                              font-size:15px;font-weight:bold;font-family:Georgia,serif;">
+                    TOTAL
+                  </td>
+                  <td align="right" style="padding-top:10px;border-top:1px solid #2a2a2a;
+                                           color:#c9a84c;font-size:20px;font-weight:bold;
+                                           font-family:Georgia,serif;">
+                    {{order_total}}
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- FOOTER -->
+    <tr>
+      <td style="padding:28px 36px;text-align:center;border-top:1px solid #2a2a2a;margin-top:24px;">
+        <p style="margin:0 0 4px;color:#c9a84c;font-size:10px;letter-spacing:3px;
+                  text-transform:uppercase;font-family:Arial,sans-serif;">
+          ÁUREA — Moda de Luxo
+        </p>
+        <p style="margin:0;color:#555;font-size:11px;font-family:Arial,sans-serif;">
+          E-mail gerado automaticamente. Responda para entrar em contato com o cliente.
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+</td></tr>
+</table>
+</body>
+</html>
