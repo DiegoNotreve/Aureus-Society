@@ -957,7 +957,7 @@
 /* Card atualizado com skeleton */
 .card {
   cursor: pointer;
-  background: var(--color-dark3);
+  background: #fff;
 }
 .card .card_info p:nth-child(2) {
   color: #fff;

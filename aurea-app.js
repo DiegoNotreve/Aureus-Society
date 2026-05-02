@@ -12,9 +12,9 @@
 const PRODUCTS = [
   {
     id: 1, brand: 'Gucci', name: 'Jaqueta Couro Premium',
-    price: 1899.90, oldPrice: 2299.90,
+    price: 199.90, oldPrice: 299.90,
     category: 'jaquetas', badge: 'SALE', badgeClass: 'sale',
-    img: 'assets/img/product-1.jpg',
+    img: 'assets/img/product-1.webp',
     rating: 4.8, reviews: 124,
     sizes: ['P','M','G','GG'], colors: [{ name: 'Preto', hex: '#1a1a1a' }, { name: 'Marrom', hex: '#5c3d1a' }],
     desc: 'Jaqueta de couro legítimo com acabamento premium. Forro interno em seda, zíper YKK e botões dourados. Corte slim italiano que valoriza a silhueta.'
@@ -23,7 +23,7 @@ const PRODUCTS = [
     id: 2, brand: 'Valentino', name: 'Malha Tricô Luxe',
     price: 749.90, oldPrice: null,
     category: 'malhas', badge: 'NOVO', badgeClass: '',
-    img: 'assets/img/product-2.jpg',
+    img: 'assets/img/product-2.webp',
     rating: 4.6, reviews: 87,
     sizes: ['P','M','G'], colors: [{ name: 'Creme', hex: '#f5e6c8' }, { name: 'Vinho', hex: '#6b1a2e' }],
     desc: 'Malha de tricô artesanal em lã merino 100%. Toque macio e textura sofisticada, ideal para looks casuais e formais.'
@@ -32,52 +32,52 @@ const PRODUCTS = [
     id: 3, brand: 'Prada', name: 'Camiseta Minimalista',
     price: 399.90, oldPrice: null,
     category: 'camisetas', badge: null, badgeClass: '',
-    img: 'assets/img/product-3.jpg',
+    img: 'assets/img/product-3.webp',
     rating: 4.5, reviews: 210,
     sizes: ['PP','P','M','G','GG'], colors: [{ name: 'Branco', hex: '#f5f5f5' }, { name: 'Preto', hex: '#111' }, { name: 'Cinza', hex: '#888' }],
     desc: 'Camiseta em algodão pima 200g, corte regular com acabamento de costura dupla. O básico elevado ao máximo de qualidade.'
   },
   {
-    id: 4, brand: 'Hermès', name: 'Moletom Oversized',
+    id: 4, brand: 'Hermès', name: 'Bolsa Birkin 30',
     price: 599.90, oldPrice: 799.90,
-    category: 'moletons', badge: 'SALE', badgeClass: 'sale',
-    img: 'assets/img/product-1.jpg',
+    category: 'bolsas', badge: 'SALE', badgeClass: 'sale',
+    img: 'assets/img/bolsahermes.webp',
     rating: 4.9, reviews: 56,
     sizes: ['M','G','GG'], colors: [{ name: 'Cinza', hex: '#888' }, { name: 'Preto', hex: '#111' }],
-    desc: 'Moletom oversized em fleece premium 380g. Interior felpudo ultra-macio. Capuz duplo e bolso canguru profundo.'
+    desc: 'Bolsa Birkin 30 em couro de crocodilo. Design clássico e sofisticado, perfeita para mulheres elegantes.'
   },
   {
     id: 5, brand: 'Dior', name: 'Camisa Social Slim',
     price: 849.90, oldPrice: null,
     category: 'camisas', badge: 'EXCLUSIVO', badgeClass: '',
-    img: 'assets/img/product-2.jpg',
+    img: 'assets/img/camisaslimdior.webp',
     rating: 4.7, reviews: 98,
     sizes: ['P','M','G'], colors: [{ name: 'Branco', hex: '#f5f5f5' }, { name: 'Azul Claro', hex: '#a8c4e0' }],
     desc: 'Camisa social em popeline egípcio com acabamento nacarado nos botões. Corte slim adaptado ao corpo brasileiro.'
   },
   {
-    id: 6, brand: 'Chanel', name: 'Jaqueta Tweed Clássica',
+    id: 6, brand: 'Chanel', name: 'bolsachanel22',
     price: 2499.90, oldPrice: null,
-    category: 'jaquetas', badge: 'EXCLUSIVO', badgeClass: '',
-    img: 'assets/img/product-3.jpg',
+    category: 'bolsas', badge: 'EXCLUSIVO', badgeClass: '',
+    img: 'assets/img/bolsachanel22.webp',
     rating: 5.0, reviews: 32,
     sizes: ['P','M','G'], colors: [{ name: 'Bege', hex: '#d4b896' }, { name: 'Preto', hex: '#111' }],
     desc: 'Jaqueta em tweed de lã francesa com bordados de corrente dourada. Icônica, intemporal e artesanal. Peça de colecionador.'
   },
   {
-    id: 7, brand: 'Louis Vuitton', name: 'Moletom Monogram',
+    id: 7, brand: 'Louis Vuitton', name: 'Sobretudo Premium',
     price: 1299.90, oldPrice: 1599.90,
     category: 'moletons', badge: 'SALE', badgeClass: 'sale',
-    img: 'assets/img/product-1.jpg',
+    img: 'assets/img/sobretudolouis.webp',
     rating: 4.8, reviews: 73,
     sizes: ['P','M','G','GG'], colors: [{ name: 'Marrom', hex: '#5c3d1a' }],
     desc: 'Moletom com estampa Monogram LV. Algodão premium 100% com acabamento bordado. Capuz com cordão e bolso frontal.'
   },
   {
-    id: 8, brand: 'Valentino', name: 'Camiseta Oversized Print',
+    id: 8, brand: 'Valentino', name: 'Camisa Oversized Print',
     price: 479.90, oldPrice: null,
-    category: 'camisetas', badge: 'NOVO', badgeClass: '',
-    img: 'assets/img/product-2.jpg',
+    category: 'camisas', badge: 'NOVO', badgeClass: '',
+    img: 'assets/img/Camisa Oversized Print.webp',
     rating: 4.4, reviews: 145,
     sizes: ['P','M','G','GG'], colors: [{ name: 'Off-White', hex: '#f0ead6' }, { name: 'Preto', hex: '#111' }],
     desc: 'Camiseta oversized com estampa artística exclusiva. Algodão orgânico 180g com caimento relaxado e estilo editorial.'
@@ -86,7 +86,7 @@ const PRODUCTS = [
     id: 9, brand: 'Gucci', name: 'Malha Gola Alta',
     price: 899.90, oldPrice: 1099.90,
     category: 'malhas', badge: 'SALE', badgeClass: 'sale',
-    img: 'assets/img/product-3.jpg',
+    img: 'assets/img/Malhagolaalta.webp',
     rating: 4.6, reviews: 61,
     sizes: ['P','M','G'], colors: [{ name: 'Verde Escuro', hex: '#1a3a2a' }, { name: 'Vinho', hex: '#6b1a2e' }],
     desc: 'Malha gola alta em cashmere escocês. Toque incomparável, resistência ao pilling e leveza excepcional.'
@@ -95,7 +95,7 @@ const PRODUCTS = [
     id: 10, brand: 'Hermès', name: 'Camisa Linho Premium',
     price: 699.90, oldPrice: null,
     category: 'camisas', badge: null, badgeClass: '',
-    img: 'assets/img/product-1.jpg',
+    img: 'assets/img/camisalinhopremium.webp',
     rating: 4.5, reviews: 88,
     sizes: ['P','M','G','GG'], colors: [{ name: 'Natural', hex: '#d4c9a8' }, { name: 'Azul', hex: '#3a6a9a' }],
     desc: 'Camisa em linho belga premium com acabamento lavado. Respirável e elegante para os dias quentes do verão.'
