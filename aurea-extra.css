@@ -1478,6 +1478,7 @@ padding: 10px 20px;
   .promo-countdown { flex-wrap: wrap; }
 }
 @media (max-width: 480px) {
+  
   .checkout-steps { gap: 0; }
   .checkout-step { font-size: 0.7rem; }
   .checkout-btns { flex-direction: column; }

@@ -337,7 +337,7 @@ body {
 /* Grid de Produtos */
 .card_content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
   justify-content: center;
 }
@@ -345,7 +345,9 @@ body {
 .card {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: transform 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -354,7 +356,8 @@ body {
 
 .card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4/5; /* Mantém uma proporção elegante e constante */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
   display: block;
   transition: transform 0.5s ease;
 }
@@ -364,14 +367,13 @@ body {
   transform: scale(1.05);
 }
 
-.card button {
+.card-add-btn {
   position: absolute;
-  top: 65%;
+  top: 65%; /* Posiciona sobre a parte inferior da imagem */
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  padding: 12px 20px;
-  margin-top: 0;
+  padding: 12px 20px !important;
   background-color: var(--color-dourado2);
   color: #000;
   border: none;
@@ -382,22 +384,18 @@ body {
   justify-content: center;
   gap: 8px;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  opacity: 0; /* Invisível por padrão */
-  visibility: hidden; /* Impede cliques quando invisível */
-  transition: all 0.3s ease;
+  opacity: 0; /* Escondido por padrão no Desktop */
+  visibility: hidden;
+  transition: all 0.3s ease !important;
 }
 
-/* AÇÃO DE HOVER NO CARD: MOSTRA O BOTÃO */
-.card:hover button {
-  opacity: 1; /* Torna visível */
-  visibility: visible; /* Permite cliques */
-  /* Opcional: Um leve efeito de "subida" ao aparecer */
-  transform: translate(-50%, -100%);
+.card:hover .card-add-btn {
+  opacity: 1;
+  visibility: visible;
 }
 
-.card button:hover {
+.card-add-btn:hover {
   background-color: #222;
   color: #fff;
 }
@@ -408,6 +406,7 @@ body {
   background-color: #555;
   padding: 10px;
   z-index: 5;
+  flex-grow: 1; /* Faz as informações "esticarem" para cobrir o fundo do card */
 }
 
 .card_info p:nth-child(1) {
@@ -419,7 +418,7 @@ body {
 
 .card_info p:nth-child(2) {
   font-weight: bold;
-  color: #333;
+  color: #fff; /* Ajustado para contraste, já que o fundo é cinza escuro (#555) */
   margin-bottom: 8px;
 }
 
@@ -743,7 +742,7 @@ body {
 
   /* COLEÇÕES */
   .card_content {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
   }
 
@@ -927,14 +926,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
-  .card button {
-    opacity: 1;
+  .card-add-btn {
+    opacity: 1; /* SEMPRE VISÍVEL NO MOBILE */
     visibility: visible;
-    transform: translate(-50%, -50%);
-    padding: 8px 14px;
-    font-size: 0.8rem;
-  }
-  .card:hover button {
+    top: 60%; 
+    font-size: 0.75rem;
+    padding: 10px !important;
     transform: translate(-50%, -50%);
   }
 
@@ -1014,6 +1011,12 @@ body {
   }
   .card_info p:nth-child(3) {
     font-size: 0.95rem;
+  }
+
+  .card button {
+    padding: 8px 12px;
+    font-size: 0.6rem;
+    top: 55%;
   }
 
   /* LOOKBOOK */
@@ -1131,5 +1134,13 @@ body {
     font-size: 0.8rem;
     padding: 10px;
     letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card button {
+    padding: 6px 10px;
+    font-size: 0.5rem;
+    top: 50%;
   }
 }

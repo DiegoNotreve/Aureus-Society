@@ -12,7 +12,7 @@
 const PRODUCTS = [
   {
     id: 1, brand: 'Gucci', name: 'Jaqueta Couro Premium',
-    price: 199.90, oldPrice: 299.90,
+    price: 18900.00, oldPrice: 22500.00,
     category: 'jaquetas', badge: 'SALE', badgeClass: 'sale',
     img: 'assets/img/product-1.webp',
     rating: 4.8, reviews: 124,
@@ -21,7 +21,7 @@ const PRODUCTS = [
   },
   {
     id: 2, brand: 'Valentino', name: 'Malha Tricô Luxe',
-    price: 749.90, oldPrice: null,
+    price: 5490.00, oldPrice: null,
     category: 'malhas', badge: 'NOVO', badgeClass: '',
     img: 'assets/img/product-2.webp',
     rating: 4.6, reviews: 87,
@@ -30,7 +30,7 @@ const PRODUCTS = [
   },
   {
     id: 3, brand: 'Prada', name: 'Camiseta Minimalista',
-    price: 399.90, oldPrice: null,
+    price: 3200.00, oldPrice: null,
     category: 'camisetas', badge: null, badgeClass: '',
     img: 'assets/img/product-3.webp',
     rating: 4.5, reviews: 210,
@@ -39,7 +39,7 @@ const PRODUCTS = [
   },
   {
     id: 4, brand: 'Hermès', name: 'Bolsa Birkin 30',
-    price: 599.90, oldPrice: 799.90,
+    price: 125000.00, oldPrice: 140000.00,
     category: 'bolsas', badge: 'SALE', badgeClass: 'sale',
     img: 'assets/img/bolsahermes.webp',
     rating: 4.9, reviews: 56,
@@ -48,7 +48,7 @@ const PRODUCTS = [
   },
   {
     id: 5, brand: 'Dior', name: 'Camisa Social Slim',
-    price: 849.90, oldPrice: null,
+    price: 4850.00, oldPrice: null,
     category: 'camisas', badge: 'EXCLUSIVO', badgeClass: '',
     img: 'assets/img/camisaslimdior.webp',
     rating: 4.7, reviews: 98,
@@ -56,8 +56,8 @@ const PRODUCTS = [
     desc: 'Camisa social em popeline egípcio com acabamento nacarado nos botões. Corte slim adaptado ao corpo brasileiro.'
   },
   {
-    id: 6, brand: 'Chanel', name: 'bolsachanel22',
-    price: 2499.90, oldPrice: null,
+    id: 6, brand: 'Chanel', name: 'Bolsa Chanel 22',
+    price: 42000.00, oldPrice: null,
     category: 'bolsas', badge: 'EXCLUSIVO', badgeClass: '',
     img: 'assets/img/bolsachanel22.webp',
     rating: 5.0, reviews: 32,
@@ -66,7 +66,7 @@ const PRODUCTS = [
   },
   {
     id: 7, brand: 'Louis Vuitton', name: 'Sobretudo Premium',
-    price: 1299.90, oldPrice: 1599.90,
+    price: 28900.00, oldPrice: 35000.00,
     category: 'moletons', badge: 'SALE', badgeClass: 'sale',
     img: 'assets/img/sobretudolouis.webp',
     rating: 4.8, reviews: 73,
@@ -75,7 +75,7 @@ const PRODUCTS = [
   },
   {
     id: 8, brand: 'Valentino', name: 'Camisa Oversized Print',
-    price: 479.90, oldPrice: null,
+    price: 6200.00, oldPrice: null,
     category: 'camisas', badge: 'NOVO', badgeClass: '',
     img: 'assets/img/Camisa Oversized Print.webp',
     rating: 4.4, reviews: 145,
@@ -84,7 +84,7 @@ const PRODUCTS = [
   },
   {
     id: 9, brand: 'Gucci', name: 'Malha Gola Alta',
-    price: 899.90, oldPrice: 1099.90,
+    price: 7800.00, oldPrice: 9200.00,
     category: 'malhas', badge: 'SALE', badgeClass: 'sale',
     img: 'assets/img/Malhagolaalta.webp',
     rating: 4.6, reviews: 61,
@@ -93,7 +93,7 @@ const PRODUCTS = [
   },
   {
     id: 10, brand: 'Hermès', name: 'Camisa Linho Premium',
-    price: 699.90, oldPrice: null,
+    price: 5900.00, oldPrice: null,
     category: 'camisas', badge: null, badgeClass: '',
     img: 'assets/img/camisalinhopremium.webp',
     rating: 4.5, reviews: 88,
@@ -205,7 +205,7 @@ function renderProducts() {
       ${p.badge ? `<div class="card-badge ${p.badgeClass}">${p.badge}</div>` : ''}
       <img src="${p.img}" alt="${p.name}" loading="lazy" />
       <button class="card-add-btn" data-id="${p.id}" aria-label="Adicionar ${p.name} ao carrinho">
-        <i class="ri-shopping-bag-4-fill"></i>Adicionar
+        <i class="ri-shopping-bag-4-fill"></i> Adicionar
       </button>
       <div class="card_info">
         <p>${p.brand}</p>
