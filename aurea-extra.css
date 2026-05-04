@@ -1306,9 +1306,9 @@ padding: 10px 20px;
   padding: 70px 8% 50px;
 }
 .footer__logo {
-  height: 60px;
+  height: 80px;
   width: auto;
-  border-radius: 50%;
+ border-radius: 10px;
   margin-bottom: 16px;
   display: block;
 }
@@ -1444,6 +1444,16 @@ padding: 10px 20px;
   .product-modal__gallery { border-radius: 16px 16px 0 0; min-height: 320px; }
 }
 @media (max-width: 768px) {
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+  }
+
   .hamburger { display: flex; }
   .navbar ul {
     display: none;
@@ -1478,7 +1488,14 @@ padding: 10px 20px;
   .promo-countdown { flex-wrap: wrap; }
 }
 @media (max-width: 480px) {
-  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+  }
   .checkout-steps { gap: 0; }
   .checkout-step { font-size: 0.7rem; }
   .checkout-btns { flex-direction: column; }
