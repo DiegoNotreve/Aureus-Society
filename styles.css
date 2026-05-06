@@ -9,6 +9,7 @@
 body {
   background-color: #000;
   z-index: -50;
+  padding-top: 112px; /* Altura estimada da navbar (80px logo + 2rem padding) */
 }
 
 .navbar {
@@ -17,6 +18,12 @@ body {
   align-items: center;
   padding: 1rem 1.25rem;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 950; /* Garante que fique sobre o conteúdo, mas abaixo de overlays de busca/carrinho */
+  border-bottom: 1px solid var(--color-dourado);
 }
 
 .navbar ul {
@@ -91,7 +98,7 @@ body {
 
 #home {
   position: relative;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 112px); /* Ajuste para manter a proporção do hero */
   overflow: hidden;
   z-index: 2;
 }
@@ -369,7 +376,7 @@ body {
 
 .card-add-btn {
   position: absolute;
-  top: 65%; /* Posiciona sobre a parte inferior da imagem */
+  top: 70%; /* Posiciona sobre a parte inferior da imagem */
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
@@ -698,6 +705,9 @@ body {
    LG — Tablets grandes / iPad Pro (< 1024px)
    ============================================================ */
 @media (max-width: 1024px) {
+  body {
+    padding-top: 0; /* Ajuste para navbar menor */
+  }
 
   /* NAVBAR */
   .navbar {
@@ -779,13 +789,16 @@ body {
    ============================================================ */
 @media (max-width: 768px) {
 
+  body {
+    padding-top: 0; /* Ajuste para navbar menor */
+  }
   /* ── NAVBAR ── */
-  .navbar {
+ .navbar {
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0.75rem 1.25rem;
-  }
+  } 
   .navbar img {
     height: 50px;
   }
@@ -1137,10 +1150,20 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+
+
+@media (min-width: 320px) and (max-width: 379px) {
   .card button {
-    padding: 6px 10px;
-    font-size: 0.5rem;
+    padding: 8px 12px;
+    font-size: 0.6rem;
     top: 50%;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 479px) {
+  .card button {
+    padding: 8px 12px;
+    font-size: 0.6rem;
+    top: 65%;
   }
 }
