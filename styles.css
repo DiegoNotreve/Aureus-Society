@@ -942,7 +942,7 @@ body {
   .card-add-btn {
     opacity: 1; /* SEMPRE VISÍVEL NO MOBILE */
     visibility: visible;
-    top: 60%; 
+    top: 68%; 
     font-size: 0.75rem;
     padding: 10px !important;
     transform: translate(-50%, -50%);
@@ -1147,23 +1147,5 @@ body {
     font-size: 0.8rem;
     padding: 10px;
     letter-spacing: 0.5px;
-  }
-}
-
-
-
-@media (min-width: 320px) and (max-width: 379px) {
-  .card button {
-    padding: 8px 12px;
-    font-size: 0.6rem;
-    top: 50%;
-  }
-}
-
-@media (min-width: 380px) and (max-width: 479px) {
-  .card button {
-    padding: 8px 12px;
-    font-size: 0.6rem;
-    top: 65%;
   }
 }
