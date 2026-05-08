@@ -780,6 +780,7 @@ document.addEventListener('DOMContentLoaded', () => {
   $('#cartClose')?.addEventListener('click', closeCart);
   $('#cartOverlay')?.addEventListener('click', closeCart);
   $('#btnContinue')?.addEventListener('click', closeCart);
+  $('#cartEmptyClose')?.addEventListener('click', closeCart);
   $('#btnCheckout')?.addEventListener('click', openCheckout);
 
   // ── Checkout ────────────────────────────────────────
